@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XRT → Asset Hub</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header>
+        <h1>XRT → Asset Hub</h1>
+        <p class="sub">Robonomics (Polkadot) → Polkadot Asset Hub, XCM teleport</p>
+      </header>
+
+      <section id="conn" class="row">
+        <span id="status" class="status">Connecting to Robonomics…</span>
+      </section>
+
+      <section>
+        <button id="connectBtn" type="button">Connect Polkadot.js extension</button>
+      </section>
+
+      <form id="form" hidden>
+        <label>
+          Sender account
+          <select id="account"></select>
+        </label>
+        <p class="hint">Transferable: <b id="balance">—</b></p>
+
+        <label>
+          Amount, XRT
+          <div class="inline">
+            <input id="amount" inputmode="decimal" autocomplete="off" placeholder="0.0" />
+            <button id="maxBtn" type="button" class="ghost">Max</button>
+          </div>
+        </label>
+
+        <label>
+          Recipient on Asset Hub (any SS58 format or 0x public key)
+          <input id="recipient" autocomplete="off" spellcheck="false" placeholder="1… / 4… / 5… / 0x…" />
+        </label>
+        <p class="hint" id="recipientInfo"></p>
+
+        <p class="hint" id="feeInfo"></p>
+
+        <button id="sendBtn" type="submit" disabled>Send</button>
+      </form>
+
+      <pre id="log" class="log" hidden></pre>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
