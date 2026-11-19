@@ -29,3 +29,7 @@ VITE_ASSET_HUB_RPC=wss://...
   The UI blocks sending in that case.
 - Asset Hub execution is paid out of the transferred XRT (it is swapped to DOT through the asset-conversion pool),
   about 0.0008 XRT per transfer. The recipient receives `amount − fee`.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
